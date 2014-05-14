@@ -1,0 +1,23 @@
+﻿<div data-options="dxView : { name: 'categories', title: 'Categories' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxScrollView: {}">
+            
+            
+            <p>pageCategories</p>
+            
+            <!--boutons-->
+            <div data-bind="dxButton: { text: 'Au choix', clickAction: navDefisCategorie3 }"></div>
+            
+            <!--popup-->
+            <div class="button" data-bind="dxButton:{text:'Un par un', clickAction:showDefisCategorie2}"></div>
+            <div data-bind="dxPopup:{visible:defisCategorie2Visible, fullScreen:true}">
+                <div data-options="dxTemplate:{name: 'title'}"><p>defisCategorie2</p></div>
+                <div data-options="dxTemplate:{name: 'content'}">
+                    <div class="button" data-bind="dxButton:{text:'X', clickAction:hideDefisCategorie2}"></div>
+                </div>
+            </div>
+            
+            
+ 	</div>                   
+    </div>
+</div>

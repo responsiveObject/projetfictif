@@ -1,0 +1,15 @@
+﻿<div data-options="dxView : { name: 'forum', title: 'Forum' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxScrollView: {}">
+
+
+            <p>pageForum</p>
+            
+            <!--tabs-->
+            <div id="tabs" data-bind="dxTabs: { dataSource: tabs, selectedIndex: selectedTab }"></div>
+            <div id="tabContent" data-bind="text: tabContent"></div>                        
+
+
+        </div>
+    </div>
+</div>

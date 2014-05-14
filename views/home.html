@@ -1,0 +1,53 @@
+﻿<div data-options="dxView : { name: 'home', title: 'Home' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+
+
+        <p>pageHome</p>
+
+        <!--boutons-->
+        <div class="buttonJouer" data-bind="dxButton: { text: 'Jouer!', clickAction: navCategories }"></div>
+        <div class="buttonForum" data-bind="dxButton: { text: 'Forum', clickAction: navForum }"></div>
+
+        <!--popup-->
+        <div class="buttonShowMessages" data-bind="dxButton:{text:'Message(s)', clickAction:showMessages}"></div>
+        <div data-bind="dxPopup:{visible:messagesVisible, fullScreen:true}">
+            <div data-options="dxTemplate:{name: 'title'}"><p>Message(s)</p></div>
+            <div data-options="dxTemplate:{name: 'content'}">
+                <div class="buttonHideMessages" data-bind="dxButton:{text:'X', clickAction:hideMessages}"></div>
+            </div>
+        </div>
+
+        <!--header-->
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        60%
+                    </div>
+                </div>                
+            </div>
+
+            <div class="col-xs-1">
+                <div class="buttonShowReseauxSociaux" data-bind="dxButton:{text:'+exp', clickAction:showReseauxSociaux}"></div>
+                <div data-bind="dxPopup:{visible:reseauxSociauxVisible, fullScreen:true}">
+                    <div data-options="dxTemplate:{name: 'title'}"><p>Reseaux sociaux</p></div>
+                    <div data-options="dxTemplate:{name: 'content'}">
+                        <div class="buttonHideReseauxSociaux" data-bind="dxButton:{text:'X', clickAction:hideReseauxSociaux}"></div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="col-xs-1">
+                <div class="buttonProfil" data-bind="dxButton: { text: 'Profil', clickAction: navProfil }"></div>
+            </div>
+
+            <div class="col-xs-2 pull-right">
+                <div class="buttonPusJetons" data-bind="dxButton: { text: '+jetons', clickAction: navPlusJetons }"></div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+

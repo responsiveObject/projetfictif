@@ -1,0 +1,36 @@
+﻿<div data-options="dxView : { name: 'plusJetons', title: 'PlusJetons' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxScrollView: {}">
+            
+            
+            <p>pagePlusJetons</p>
+
+            <!--popup-->
+            <div class="button" data-bind="dxButton:{text:'Acheter', clickAction:showAcheter}"></div>
+            <div data-bind="dxPopup:{visible:acheterVisible, fullScreen:true}">
+                <div data-options="dxTemplate:{name: 'title'}"><p>Offres d'achats</p></div>
+                <div data-options="dxTemplate:{name: 'content'}">
+                    <div class="button" data-bind="dxButton:{text:'X', clickAction:hideAcheter}"></div>
+                </div>
+            </div>
+            
+            <div class="button" data-bind="dxButton:{text:'Vidéos', clickAction:showVideos}"></div>
+            <div data-bind="dxPopup:{visible:videosVisible, fullScreen:true}">
+                <div data-options="dxTemplate:{name: 'title'}"><p>Videos</p></div>
+                <div data-options="dxTemplate:{name: 'content'}">
+                    <div class="button" data-bind="dxButton:{text:'X', clickAction:hideVideos}"></div>    
+                </div>
+            </div>
+            
+            <div class="button" data-bind="dxButton:{text:'Applications', clickAction:showApplications}"></div>
+            <div data-bind="dxPopup:{visible:applicationsVisible, fullScreen:true}">
+                <div data-options="dxTemplate:{name: 'title'}"><p>Applications</p></div>
+                <div data-options="dxTemplate:{name: 'content'}">
+                    <div class="button" data-bind="dxButton:{text:'X', clickAction:hideApplications}"></div>        
+                </div>
+            </div>
+            
+                       
+        </div>                   
+    </div>
+</div>
